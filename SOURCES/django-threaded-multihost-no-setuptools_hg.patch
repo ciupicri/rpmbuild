@@ -1,0 +1,8 @@
+--- a/setup.py	2010-04-29 19:11:22.188689017 +0300
++++ b/setup.py	2010-06-28 17:47:09.165380550 +0300
+@@ -25,5 +25,4 @@
+     packages = ['threaded_multihost'],
+     #package_dir = {'':'threaded_multihost'},
+     include_package_data = False,
+-    setup_requires = ["setuptools_hg"],
+ )
