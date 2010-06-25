@@ -1,0 +1,9 @@
+--- a/setup.py	2010-04-29 19:49:56.383688270 +0300
++++ b/setup.py	2010-06-28 17:47:48.214201502 +0300
+@@ -28,6 +28,5 @@
+                    'Programming Language :: Python',
+                    'Framework :: Django'],
+     packages = find_packages(),
+-    setup_requires=["setuptools_hg"],
+     include_package_data = True,
+ )
