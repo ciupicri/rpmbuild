@@ -1,0 +1,8 @@
+--- a/setup.py	2010-06-24 19:00:41.310407366 +0300
++++ b/setup.py	2010-06-28 17:45:59.980075319 +0300
+@@ -20,5 +20,4 @@
+     include_package_data=True,
+     zip_safe=False,
+     install_requires=['setuptools'],
+-    setup_requires=['setuptools_hg'],
+ )
