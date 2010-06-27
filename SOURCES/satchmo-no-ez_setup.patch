@@ -1,0 +1,11 @@
+--- a/setup.py	2010-05-06 22:42:36.084762123 +0300
++++ b/setup.py	2010-06-27 18:59:00.492389939 +0300
+@@ -3,8 +3,6 @@
+ # This will effectively place satchmo files but there needs to
+ # be extra work before this would work correctly
+ 
+-import ez_setup
+-ez_setup.use_setuptools()
+ from setuptools import setup, find_packages
+ import os, os.path
+ import sys

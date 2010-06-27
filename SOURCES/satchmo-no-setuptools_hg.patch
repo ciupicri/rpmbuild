@@ -1,0 +1,10 @@
+--- a/setup.py	2010-05-06 22:42:36.084762123 +0300
++++ b/setup.py	2010-06-28 17:48:31.812076564 +0300
+@@ -38,7 +38,6 @@
+       'satchmo_skeleton' : 'satchmo/projects/skeleton',
+       },
+       scripts=['scripts/clonesatchmo.py'],
+-      setup_requires=["setuptools_hg"],
+       packages = packages,
+       classifiers = [
+       'Development Status :: 4 - Beta',
