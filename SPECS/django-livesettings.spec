@@ -1,10 +1,8 @@
-%global hg_date 20101116
-%global hg_version 32a38a60367a
-%global posttag %{hg_date}hg%{hg_version}
+%global hg_version 9467c4bb5471
 
 Name:           django-livesettings
-Version:        1.4.4
-Release:        1.%{posttag}%{?dist}
+Version:        1.4.7
+Release:        1
 Summary:        Django livesettings
 
 Group:          Development/Languages
@@ -54,5 +52,5 @@ find $RPM_BUILD_ROOT -name "*.po" -exec rm -f {} \+
 
 
 %changelog
-* Tue Nov 16 2010 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 1.4.4-1.20101116hg32a38a60367a
+* Wed Mar 02 2011 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 1.4.7-1
 - Initial package
