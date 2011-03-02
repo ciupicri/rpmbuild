@@ -20,7 +20,7 @@ BuildArch:      noarch
 BuildRequires:  python2-devel
 BuildRequires:  python-setuptools
 # for message catalog compilation
-BuildRequires:  python-babel
+BuildRequires:  Django
 Requires:       Django
 Requires:       python-sorl-thumbnail
 Requires:       python-crypto
@@ -56,7 +56,7 @@ find -name '*.mo' -exec rm -f {} \+
 
 
 %build
-find -name locale -exec %{__python} setup.py compile_catalog --domain django -d {} \;
+find -name locale -exec sh -c 'cd $0 && cd .. && django-admin compilemessages' {} \;
 %{__python} setup.py build
 pushd docs
 make html
