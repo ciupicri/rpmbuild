@@ -1,0 +1,22 @@
+changeset:   48:f23912d728b1
+tag:         tip
+user:        Cristian Ciupitu <cristian.ciupitu@yahoo.com>
+date:        Fri May 06 22:08:56 2011 +0300
+summary:     Fixed a syntax error ("duplicate keyword arguments")
+
+diff -r 3faf76f78088 -r f23912d728b1 livesettings/tests.py
+--- a/livesettings/tests.py	Tue Apr 26 19:36:17 2011 -0500
++++ b/livesettings/tests.py	Fri May 06 22:08:56 2011 +0300
+@@ -558,8 +558,9 @@
+         user1.save()
+         user2 = User.objects.create_user('developer', 'fred@example.com', 'secret')
+         user2.is_staff = True
+-        user2.user_permissions.add(Permission.objects.get(codename='change_setting', 
+-                content_type=ContentType.objects.get(app_label='livesettings', model='setting'), codename='change_setting'))
++        user2.user_permissions.add(Permission.objects.get(
++            codename='change_setting',
++            content_type=ContentType.objects.get(app_label='livesettings', model='setting')))
+         user2.save()
+ 
+         keyedcache.cache_delete()
+
