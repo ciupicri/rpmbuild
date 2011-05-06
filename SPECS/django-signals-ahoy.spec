@@ -1,5 +1,5 @@
-%global hg_date 20100118
-%global hg_version 4025183881b7
+%global hg_date 20110420
+%global hg_version 87f60574d64b
 %global posttag %{hg_date}hg%{hg_version}
 
 Name:           django-signals-ahoy
@@ -45,5 +45,5 @@ rm -rf ${RPM_BUILD_ROOT}%{python_sitelib}/tests
 
 
 %changelog
-* Thu Nov 04 2010 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 0.1.1-1.20100118hg4025183881b7
+* Thu Nov 04 2010 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 0.1.1-1.20110420hg87f60574d64b
 - Initial package
