@@ -21,6 +21,7 @@ BuildRequires:  python2-devel
 BuildRequires:  python-setuptools
 # for message catalog compilation
 BuildRequires:  Django
+BuildRequires:  gettext
 Requires:       Django
 Requires:       python-sorl-thumbnail
 Requires:       python-crypto
