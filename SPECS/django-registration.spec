@@ -29,7 +29,13 @@ An extensible user-registration application for Django.
 %install
 rm -rf $RPM_BUILD_ROOT
 %{__python} setup.py install -O1 --skip-build --root $RPM_BUILD_ROOT
-%find_lang django
+%if ! (0%{?fedora} > 13 || 0%{?rhel} > 6)
+	(cd $RPM_BUILD_ROOT && find . -name 'django*.mo') | %{__sed} -e 's|^.||' | %{__sed} -e \
+		's:\(.*/locale/\)\([^/_]\+\)\(.*\.mo$\):%lang(\2) \1\2\3:' \
+		>> django.lang
+%else
+	%find_lang django
+%endif
 find $RPM_BUILD_ROOT -name "*.po" -exec rm -f {} \+
 
  
