@@ -2,8 +2,8 @@
 %{!?python_sitelib: %global python_sitelib %(%{__python} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")}
 %{!?python_sitearch: %global python_sitearch %(%{__python} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1))")}
 %endif
-%global hg_date 20110426
-%global hg_version 3faf76f78088
+%global hg_date 20110521
+%global hg_version 6b4d47fbe708
 %global posttag %{hg_date}hg%{hg_version}
 
 Name:           django-livesettings
@@ -17,7 +17,6 @@ URL:            http://bitbucket.org/bkroeze/django-livesettings/
 # Source0:        http://bitbucket.org/bkroeze/%{name}/get/%{hg_version}.tar.bz2
 Source0:        %{name}-%{hg_version}.tar.bz2
 Patch0:         %{name}-no-setuptools_hg.patch
-Patch1:         %{name}-syntax-error-fix.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildArch:      noarch
@@ -36,7 +35,6 @@ editing "settings.py".
 %prep
 %setup -q -n %{name}
 %patch0 -p1
-%patch1 -p1
 find -name '*.mo' -exec rm -f {} \+
 
 
@@ -66,5 +64,5 @@ find $RPM_BUILD_ROOT -name "*.po" -exec rm -f {} \+
 
 
 %changelog
-* Wed Mar 02 2011 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 1.4.9-1.20110426hg3faf76f78088
+* Sat May 21 2011 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 1.4.9-1.20110521hg6b4d47fbe708
 - Initial package
