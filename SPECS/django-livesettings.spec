@@ -23,7 +23,8 @@ BuildArch:      noarch
 BuildRequires:  python2-devel
 BuildRequires:  python-setuptools
 # for message catalog compilation
-BuildRequires:  python-babel
+BuildRequires:  Django
+BuildRequires:  gettext
 Requires:       Django
 
 %description
@@ -39,7 +40,7 @@ find -name '*.mo' -exec rm -f {} \+
 
 
 %build
-%{__python} setup.py compile_catalog --domain django -d livesettings/locale
+find -name locale -exec sh -c 'cd $0 && cd .. && django-admin compilemessages' {} \;
 %{__python} setup.py build
 
 
