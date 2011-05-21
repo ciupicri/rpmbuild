@@ -24,7 +24,11 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 BuildRequires:  python2-devel
 # for documentation
+%if ! (0%{?fedora} > 13 || 0%{?rhel} > 5)
+BuildRequires:  python-sphinx10
+%else
 BuildRequires:  python-sphinx
+%endif
 Requires:       python-imaging
 # To enable PDF thumbnails you need ImageMagick
 Requires:       ImageMagick
@@ -44,7 +48,11 @@ sorl-thumbnail is a simple to use thumbnailing application for Django.
 # documentation
 %{__sed} -i 's/\r//' README
 pushd docs
-make html
+%if ! (0%{?fedora} > 13 || 0%{?rhel} > 5)
+	make SPHINXBUILD=sphinx-1.0-build html
+%else
+	make html
+%endif
 rm _build/html/.buildinfo
 popd
 
