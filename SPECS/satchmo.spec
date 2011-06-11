@@ -2,8 +2,8 @@
 %{!?python_sitelib: %global python_sitelib %(%{__python} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")}
 %{!?python_sitearch: %global python_sitearch %(%{__python} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1))")}
 %endif
-%global hg_date 20110521
-%global hg_version 2b777bb2d4a7
+%global hg_date 20110806
+%global hg_version 79d365f2f60d
 %global posttag %{hg_date}hg%{hg_version}
 
 Name:           satchmo
@@ -106,5 +106,5 @@ rm -rf ${RPM_BUILD_ROOT}%{python_sitelib}/docs
 
 
 %changelog
-* Sat May 21 2011 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 0.9.1-1.20110521hg2b777bb2d4a7
+* Mon Aug 6 2011 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 0.9.1-1.20110806hg79d365f2f60d
 - Initial package
