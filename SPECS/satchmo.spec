@@ -16,6 +16,7 @@ License:        BSD
 URL:            http://www.satchmoproject.com
 # Source0:        http://bitbucket.org/chris1610/%{name}/get/%{hg_version}.tar.bz2
 Source0:        %{name}-%{hg_version}.tar.bz2
+Source1:        %{name}-l10n-ro.tar.xz
 Patch0:         %{name}-no-ez_setup.patch
 Patch1:         %{name}-no-setuptools_hg.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
@@ -60,7 +61,7 @@ This package contains the documentation for the Satchmo e-commerce framework.
 
 
 %prep
-%setup -q -n %{name}
+%setup -q -a 1 -n %{name}
 %patch0 -p1
 %patch1 -p1
 find -name '*.mo' -exec rm -f {} \+
