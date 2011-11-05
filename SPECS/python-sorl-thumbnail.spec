@@ -20,7 +20,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 BuildRequires:  python2-devel
 # for documentation
-%if ! (0%{?fedora} > 13 || 0%{?rhel} > 5)
+%if ! (0%{?fedora} > 13 || 0%{?rhel} > 6)
 BuildRequires:  python-sphinx10
 %else
 BuildRequires:  python-sphinx
@@ -44,7 +44,7 @@ sorl-thumbnail is a simple to use thumbnailing application for Django.
 # documentation
 %{__sed} -i 's/\r//' README
 pushd docs
-%if ! (0%{?fedora} > 13 || 0%{?rhel} > 5)
+%if ! (0%{?fedora} > 13 || 0%{?rhel} > 6)
 	make SPHINXBUILD=sphinx-1.0-build html
 %else
 	make html

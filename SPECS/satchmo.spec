@@ -20,7 +20,7 @@ BuildArch:      noarch
 BuildRequires:  python2-devel
 BuildRequires:  python-setuptools
 # for documentation
-%if ! (0%{?fedora} > 13 || 0%{?rhel} > 5)
+%if ! (0%{?fedora} > 13 || 0%{?rhel} > 6)
 BuildRequires:  python-sphinx10
 %else
 BuildRequires:  python-sphinx
@@ -66,7 +66,7 @@ find -name '*.mo' -exec rm -f {} \+
 find -name locale -exec sh -c 'cd $0 && cd .. && django-admin compilemessages' {} \;
 %{__python} setup.py build
 pushd docs
-%if ! (0%{?fedora} > 13 || 0%{?rhel} > 5)
+%if ! (0%{?fedora} > 13 || 0%{?rhel} > 6)
 	make SPHINXBUILD=sphinx-1.0-build html
 %else
 	make html
