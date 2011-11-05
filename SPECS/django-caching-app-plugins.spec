@@ -1,10 +1,10 @@
-%global hg_date 20100612
-%global hg_version dd9c1dccfea8
+%global hg_date 20111018
+%global hg_version b0e77d2243cb
 %global posttag %{hg_date}hg%{hg_version}
 
 Name:           django-caching-app-plugins
-Version:        0.1.2
-Release:        1.%{posttag}%{?dist}
+Version:        0.1.3
+Release:        1%{?dist}
 Summary:        Django caching app plugins
 
 Group:          Development/Languages
@@ -59,5 +59,5 @@ find $RPM_BUILD_ROOT -name "*.po" -exec rm -f {} \+
 
 
 %changelog
-* Thu Nov 04 2010 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 0.1.2-1.20100612hgdd9c1dccfea8
+* Thu Nov 05 2011 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 0.1.3-1
 - Initial package
