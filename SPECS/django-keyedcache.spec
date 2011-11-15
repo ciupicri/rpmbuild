@@ -1,9 +1,9 @@
-%global hg_date 20110512
-%global hg_version cea4e6528ba0
+%global hg_date 20111111
+%global hg_version 4bf75598cab6
 %global posttag %{hg_date}hg%{hg_version}
 
 Name:           django-keyedcache
-Version:        1.4.5
+Version:        1.4.6
 Release:        1%{?dist}
 Summary:        Django Keyedcache
 
@@ -58,5 +58,5 @@ find $RPM_BUILD_ROOT -name "*.po" -exec rm -f {} \+
 
 
 %changelog
-* Sat May 21 2010 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 1.4.5-1
+* Tue Nov 15 2011 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 1.4.6-1
 - Initial package
