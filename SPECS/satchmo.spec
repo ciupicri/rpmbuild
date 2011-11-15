@@ -1,5 +1,5 @@
-%global hg_date 20111103
-%global hg_version a2e67bada265
+%global hg_date 20111113
+%global hg_version 7fa34a6569eb
 %global posttag %{hg_date}hg%{hg_version}
 
 Name:           satchmo
@@ -102,5 +102,5 @@ rm -rf ${RPM_BUILD_ROOT}%{python_sitelib}/docs
 
 
 %changelog
-* Mon Aug 6 2011 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 0.9.1-1.20111103hga2e67bada265
+* Tue Nov 15 2011 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 0.9.1-1.20111113hg7fa34a6569eb
 - Initial package
