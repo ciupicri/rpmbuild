@@ -1,10 +1,10 @@
-%global hg_date 20110420
-%global hg_version 87f60574d64b
-%global posttag %{hg_date}hg%{hg_version}
+%global hg_date 20111223
+%global hg_version 098009ab37f7
+#%global posttag %{hg_date}hg%{hg_version}
 
 Name:           django-signals-ahoy
-Version:        0.1.1
-Release:        1.%{posttag}%{?dist}
+Version:        0.1.3
+Release:        1%{?dist}
 Summary:        Django Signals Ahoy
 
 Group:          Development/Languages
@@ -45,5 +45,5 @@ rm -rf ${RPM_BUILD_ROOT}%{python_sitelib}/tests
 
 
 %changelog
-* Thu Nov 04 2010 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 0.1.1-1.20110420hg87f60574d64b
+* Wed May 01 2012 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 0.1.3-1
 - Initial package
