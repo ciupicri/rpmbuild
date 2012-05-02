@@ -1,9 +1,9 @@
-%global hg_date 20111207
-%global hg_version 3392b2bc101f
+%global hg_date 20120428
+%global hg_version 953206665bff
 %global posttag %{hg_date}hg%{hg_version}
 
 Name:           satchmo
-Version:        0.9.1
+Version:        0.9.2
 Release:        1.%{posttag}%{?dist}
 Summary:        The web shop for perfectionists with deadlines
 
@@ -102,5 +102,5 @@ rm -rf ${RPM_BUILD_ROOT}%{python_sitelib}/docs
 
 
 %changelog
-* Thu Dec 08 2011 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 0.9.1-1.20111207hg3392b2bc101f
+* Wed May 02 2012 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 0.9.2-1.20120428hg953206665bff
 - Initial package
