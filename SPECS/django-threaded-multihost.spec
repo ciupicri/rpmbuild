@@ -1,5 +1,5 @@
-%global hg_date 20110306
-%global hg_version 4aebd54035c8
+%global hg_date 20110518
+%global hg_version 27a62f80ee24
 %global posttag %{hg_date}hg%{hg_version}
 
 Name:           django-threaded-multihost
@@ -48,5 +48,5 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
-* Tue Mar 29 2011 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 1.4.1-1.20110306hg4aebd54035c8
+* Wed May 02 2012 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 1.4.1-1.20110518hg27a62f80ee24
 - Initial package
