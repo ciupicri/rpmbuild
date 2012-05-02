@@ -1,9 +1,9 @@
-%global hg_date 20110920
-%global hg_version ab977d6e9aec
+%global hg_date 20120328
+%global hg_version fe16a426b273
 %global posttag %{hg_date}hg%{hg_version}
 
 Name:           django-livesettings
-Version:        1.4.9
+Version:        1.4.11
 Release:        1.%{posttag}%{?dist}
 Summary:        Django livesettings
 
@@ -61,5 +61,5 @@ find $RPM_BUILD_ROOT -name "*.po" -exec rm -f {} \+
 
 
 %changelog
-* Sat Nov 19 2011 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 1.4.9-1.20110920hgab977d6e9aec
+* Wed May 02 2012 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 1.4.11-1.20120328hgfe16a426b273
 - Initial package
