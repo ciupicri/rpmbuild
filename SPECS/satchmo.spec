@@ -31,7 +31,7 @@ BuildRequires:  gettext
 Requires:       Django
 Requires:       python-sorl-thumbnail
 Requires:       python-crypto
-Requires:       python-trml2pdf
+Requires:       python-trml2pdf12
 Requires:       django-threaded-multihost
 Requires:       django-caching-app-plugins
 Requires:       django-livesettings
