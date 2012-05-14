@@ -1,5 +1,5 @@
-%global hg_date 20120509
-%global hg_version e84143e3e33f
+%global hg_date 20120513
+%global hg_version a04c87a539f3
 %global posttag %{hg_date}hg%{hg_version}
 
 Name:           satchmo
@@ -102,5 +102,5 @@ rm -rf ${RPM_BUILD_ROOT}%{python_sitelib}/docs
 
 
 %changelog
-* Thu May 10 2012 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 0.9.2-1.20120509hge84143e3e33f
+* Mon May 13 2012 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 0.9.2-1.20120513hga04c87a539f3
 - Initial package
