@@ -2,9 +2,9 @@
 
 Name:           python-trml2pdf12
 Version:        1.2
-Release:        4%{?dist}
+Release:        5%{?dist}
 Provides:       python-trml2pdf = %{version}-%{release}
-Obsoletes:      python-trml2pdf < 1.2-3
+Obsoletes:      python-trml2pdf < 1.2-5
 Summary:        Tiny RML2PDF is a tool to easily create PDF documents without programming
 
 Group:          Development/Languages
@@ -12,7 +12,6 @@ License:        LGPLv2+
 URL:            http://www.satchmoproject.com/snapshots/
 Source0:        http://www.satchmoproject.com/snapshots/%{srcname}-%{version}.tar.gz
 Source1:        http://svn.debian.org/viewsvn/python-modules/packages/python-trml2pdf/trunk/debian/%{srcname}.1
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildArch:      noarch
 
@@ -38,7 +37,6 @@ This is a compat package for programs which still need version 1.2.
 
 
 %install
-rm -rf $RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT%{python_sitelib}
 easy_install -m --prefix $RPM_BUILD_ROOT%{_usr} dist/*.egg
 find $RPM_BUILD_ROOT%{python_sitelib} -type f -exec chmod -x \{\} \;
@@ -52,7 +50,6 @@ ln -s %{python_sitelib}/TRML2PDF-1.0-py2.7.egg/trml2pdf/trml2pdf.py ${RPM_BUILD_
 
  
 %files
-%defattr(-,root,root,-)
 %doc COPYRIGHT.txt INSTALL.txt LICENSE.txt README.txt
 %{python_sitelib}/*
 %{_bindir}/*
@@ -60,6 +57,9 @@ ln -s %{python_sitelib}/TRML2PDF-1.0-py2.7.egg/trml2pdf/trml2pdf.py ${RPM_BUILD_
 
 
 %changelog
+* Wed May 22 2013 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 1.2-5
+- Fix and modernize spec
+
 * Fri May 11 2012 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 1.2-4
 - Package python-trml2pdf12 as an egg
 
