@@ -11,7 +11,7 @@ Group:          Development/Languages
 License:        LGPLv2+
 URL:            http://www.satchmoproject.com/snapshots/
 Source0:        http://www.satchmoproject.com/snapshots/%{srcname}-%{version}.tar.gz
-Source1:        http://svn.debian.org/viewsvn/python-modules/packages/python-trml2pdf/trunk/debian/%{srcname}.1
+Source1:        http://svn.debian.org/viewsvn/python-modules/packages/python-trml2pdf/trunk/debian/%{srcname}.1?revision=2936&view=co#/%{srcname}.1
 
 BuildArch:      noarch
 
@@ -57,6 +57,9 @@ ln -s %{python_sitelib}/TRML2PDF-1.0-py2.7.egg/trml2pdf/trml2pdf.py ${RPM_BUILD_
 
 
 %changelog
+* Wed Jun 19 2013 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 1.2-6
+- Update URL for Source1 (thanks Jos de Kloe)
+
 * Wed May 22 2013 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 1.2-5
 - Fix and modernize spec
 
