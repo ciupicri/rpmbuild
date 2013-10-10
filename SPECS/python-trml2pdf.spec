@@ -2,14 +2,14 @@
 
 Name:           python-trml2pdf
 Version:        1.2
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Tiny RML2PDF is a tool to easily create PDF documents without programming
 
 Group:          Development/Languages
 License:        LGPLv2+
 URL:            http://www.satchmoproject.com/snapshots/
 Source0:        http://www.satchmoproject.com/snapshots/%{srcname}-%{version}.tar.gz
-Source1:        http://svn.debian.org/viewsvn/python-modules/packages/python-trml2pdf/trunk/debian/%{srcname}.1
+Source1:        http://svn.debian.org/viewsvn/python-modules/packages/python-trml2pdf/trunk/debian/%{srcname}.1?revision=2936&view=co#/%{srcname}.1
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildArch:      noarch
@@ -53,6 +53,9 @@ ln -s %{python_sitelib}/trml2pdf/trml2pdf.py ${RPM_BUILD_ROOT}/%{_bindir}/trml2p
 
 
 %changelog
+* Thu Oct 10 2013 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 1.2-3
+- Fix URL for Source1 (thanks Jos de Kloe)
+
 * Tue Nov 09 2010 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 1.2-2
 - Add man page (from Debian)
 
