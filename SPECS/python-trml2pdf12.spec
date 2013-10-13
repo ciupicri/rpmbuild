@@ -2,7 +2,7 @@
 
 Name:           python-trml2pdf12
 Version:        1.2
-Release:        10%{?dist}
+Release:        13%{?dist}
 Provides:       python-trml2pdf = %{version}-%{release}
 Obsoletes:      python-trml2pdf <= 1.2-9
 Summary:        Tiny RML2PDF is a tool to easily create PDF documents without programming
@@ -25,7 +25,7 @@ Requires:       python-imaging
 %description
 Convert Report Markup Language (RML) files to PDF.
 
-This is a compatibilitxy package for programs which still need version 1.2.
+This is a compatibility package for programs which still need version 1.2.
 
 
 %prep
@@ -33,21 +33,21 @@ This is a compatibilitxy package for programs which still need version 1.2.
 
 
 %build
-%{__python} -c 'import setuptools; execfile("setup.py")' bdist_egg
+%{__python2} -c 'import setuptools; execfile("setup.py")' bdist_egg
 
 
 %install
-mkdir -p $RPM_BUILD_ROOT%{python_sitelib}
-easy_install -m --prefix $RPM_BUILD_ROOT%{_usr} --always-unzip dist/*.egg
+mkdir -p %{buildroot}%{python_sitelib}
+easy_install -m --prefix %{buildroot}%{_usr} --always-unzip dist/*.egg
 
 # copy man page
-install -m 755 -d ${RPM_BUILD_ROOT}%{_mandir}/man1
-install -m 644 %{SOURCE1} ${RPM_BUILD_ROOT}%{_mandir}/man1/trml2pdf12.1
+install -m 755 -d %{buildroot}%{_mandir}/man1
+install -m 644 %{SOURCE1} %{buildroot}%{_mandir}/man1/trml2pdf12.1
 
 # upsteam is a bit dead, so there's no one to extract a script from the module
-chmod +x ${RPM_BUILD_ROOT}%{python_sitelib}/TRML2PDF-1.0-py2.7.egg/trml2pdf/trml2pdf.py
-install -m 755 -d ${RPM_BUILD_ROOT}/%{_bindir}
-ln -s %{python_sitelib}/TRML2PDF-1.0-py2.7.egg/trml2pdf/trml2pdf.py ${RPM_BUILD_ROOT}%{_bindir}/trml2pdf12
+chmod +x %{buildroot}%{python_sitelib}/TRML2PDF-1.0-py2.7.egg/trml2pdf/trml2pdf.py
+install -m 755 -d %{buildroot}/%{_bindir}
+ln -s %{python_sitelib}/TRML2PDF-1.0-py2.7.egg/trml2pdf/trml2pdf.py %{buildroot}%{_bindir}/trml2pdf12
 
  
 %files
@@ -58,6 +58,15 @@ ln -s %{python_sitelib}/TRML2PDF-1.0-py2.7.egg/trml2pdf/trml2pdf.py ${RPM_BUILD_
 
 
 %changelog
+* Sun Oct 13 2013 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 1.2-13
+- Fix misspell (thanks Jos de Kloe)
+
+* Sun Oct 13 2013 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 1.2-12
+- Replace __python macro with __python2 (thanks Jos de Kloe)
+
+* Sun Oct 13 2013 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 1.2-11
+- Use macros consistently (thanks Jos de Kloe)
+
 * Thu Oct 10 2013 Cristian Ciupitu <cristian.ciupitu@yahoo.com> - 1.2-10
 - Rename to python-trml2pdf12 (FPC #171)
 
